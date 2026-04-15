@@ -119,15 +119,20 @@ const Index = () => {
         </div>
       </section>
 
-      {/* VSL */}
+{/* VSL */}
       <section className="section-padding">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="relative bg-card border border-border rounded-2xl aspect-video flex items-center justify-center mb-8 overflow-hidden group cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-              <div className="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary group-hover:scale-110 transition-transform">
-                <Play className="w-8 h-8 text-primary ml-1" />
-              </div>
+            <div className="relative bg-card border border-border rounded-2xl overflow-hidden mb-8 aspect-video">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                poster={ebookCover}
+                preload="metadata"
+              >
+                <source src="/__l5e/assets-v1/983300be-ff7d-4ced-91cd-0f0658584b75/vsl-video.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
             </div>
             <p className="text-foreground text-lg font-semibold mb-6">
               Assiste este vídeo até ao final e entende:
