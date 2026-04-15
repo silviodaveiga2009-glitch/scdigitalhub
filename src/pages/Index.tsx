@@ -119,37 +119,26 @@ const Index = () => {
         </div>
       </section>
 
-{/* VSL */}
-      <section className="section-padding">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* VSL */}
+      <section className="py-16 md:py-24 px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="relative bg-card border border-border rounded-2xl overflow-hidden mb-8 aspect-video">
+            <p className="font-heading font-bold text-xl md:text-2xl text-foreground mb-8">
+              🎬 Assiste antes de continuar
+            </p>
+            <div className="relative bg-card border-2 border-primary/20 rounded-2xl overflow-hidden mb-10 aspect-video shadow-2xl shadow-primary/10">
               <video
                 className="w-full h-full object-cover"
                 controls
                 poster={ebookCover}
                 preload="metadata"
+                playsInline
               >
-                <source src="/__l5e/assets-v1/983300be-ff7d-4ced-91cd-0f0658584b75/vsl-video.mp4" type="video/mp4" />
+                <source src="/vsl-video.mp4" type="video/mp4" />
                 Seu navegador não suporta o elemento de vídeo.
               </video>
             </div>
-            <p className="text-foreground text-lg font-semibold mb-6">
-              Assiste este vídeo até ao final e entende:
-            </p>
-            <div className="space-y-3 mb-8 text-left max-w-md mx-auto">
-              {[
-                "O erro que te impede de crescer",
-                "Como começar mesmo do zero",
-                "Como transformar visualizações em dinheiro",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-secondary-foreground">{item}</span>
-                </div>
-              ))}
-            </div>
-            <CTAButton text="QUERO ACESSAR AGORA" />
+            <CTAButton text="QUERO COMEÇAR AGORA" className="text-xl px-12 py-4" />
           </motion.div>
         </div>
       </section>
