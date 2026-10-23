@@ -5,12 +5,12 @@ interface CTAButtonProps {
   className?: string;
 }
 
-const CTAButton = ({ text = "QUERO COMEÇAR AGORA", className = "" }: CTAButtonProps) => (
+const CTAButton = ({ text = "Comprar o eBook por 5.000 KZ", className = "" }: CTAButtonProps) => (
   <a
     href={CHECKOUT_URL}
     target="_blank"
     rel="noopener noreferrer"
-    className={`btn-cta inline-block text-center animate-pulse-glow ${className}`}
+    className={`btn-cta inline-block text-center ${className}`}
   >
     {text}
   </a>
