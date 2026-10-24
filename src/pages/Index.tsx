@@ -305,6 +305,10 @@ const Index = () => {
                   q: "O que preciso para aplicar o método?",
                   a: "Um telemóvel e vontade de aplicar a estratégia. Todo o processo foi pensado para quem começa sem equipamento especial.",
                 },
+                {
+                  q: "Tenho uma dúvida. Como posso falar com a SC Digital?",
+                  a: "Envia uma mensagem pelo WhatsApp para +244 950 846 620.",
+                },
               ].map(({ q, a }) => (
                 <div key={q} className="bg-card border border-border rounded-xl p-5">
                   <p className="font-heading font-semibold text-foreground mb-2">{q}</p>
@@ -334,7 +338,16 @@ const Index = () => {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="py-8 border-t border-border text-center">
+      <footer className="py-8 border-t border-border text-center space-y-3">
+        <a
+          href="https://wa.me/244950846620"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 min-h-11 px-4 text-primary font-semibold hover:underline"
+          aria-label="Falar com a SC Digital no WhatsApp: +244 950 846 620"
+        >
+          WhatsApp: +244 950 846 620
+        </a>
         <p className="text-muted-foreground text-sm">
           © {new Date().getFullYear()} SC Digital. Todos os direitos reservados.
         </p>
